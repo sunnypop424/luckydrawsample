@@ -1,0 +1,320 @@
+.admin {
+    background-color: #eaeaea;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    flex-direction: column;
+}
+
+.admin-login {
+    display: flex;
+    gap: 5px;
+    margin-top: 1rem;
+    flex-direction: column;
+    width: 320px;
+}
+
+.admin-wrapper {
+    width: 80vw;
+    margin: 0 auto;
+    padding: 2rem;
+    background-color: #ffffff;
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+}
+
+.admin-header {
+    width: 80vw;
+    margin: 0 auto 1rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.admin h1 {
+    font-size: 2rem;
+}
+
+.admin-header h1 span {
+    font-size: 1rem;
+}
+
+.admin-status {
+    text-align: right;
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    gap: 1rem;
+}
+
+.admin-status p {
+    font-weight: 500;
+    margin-right: 0.5rem;
+}
+
+.admin-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.admin-row h2 {
+    margin-bottom: 1rem;
+    font-size: 1.4rem;
+}
+
+.admin-row + .admin-row {
+    margin-top:  2rem;
+}
+
+.admin-table {
+    width: 80vw;
+    margin: 0 auto;
+    border-radius: 12px;
+    box-shadow: rgba(149, 157, 165, 0.2) 0px 8px 24px;
+    max-height: 50vh;
+    overflow-y: auto;
+    -ms-overflow-style: none;
+}
+
+.admin-table::-webkit-scrollbar {
+    display: none;
+}
+
+table {
+    border-spacing: 1;
+    border-collapse: collapse;
+    background: white;
+    border-radius: 10px;
+    overflow: hidden;
+    width: 100%;
+    margin: 0 auto;
+    position: relative;
+    min-width: 960px;
+}
+
+table * {
+    position: relative;
+}
+
+table td,
+table th {
+    padding: 0 8px;
+}
+
+table thead tr {
+    height: 60px;
+    background: #e6f9fd;
+}
+
+table tbody tr {
+    height: 64px;
+}
+
+table tbody tr:last-child {
+    border: 0;
+}
+
+table td,
+table th {
+    text-align: center;
+    vertical-align: middle;
+}
+
+table td.l,
+table th.l {
+    text-align: right;
+}
+
+table td.c,
+table th.c {
+    text-align: center;
+}
+
+table td.r,
+table th.r {
+    text-align: center;
+}
+
+tbody tr:nth-child(even) {
+    background-color: #f5f5f5;
+}
+
+tbody tr {
+    font-size: 15px;
+    line-height: 1.2;
+    font-weight: unset;
+}
+
+tbody tr:hover {
+    background-color: #f5f5f5;
+}
+
+.admin-row label {
+    display: inline-flex;
+    align-items: center;
+    margin-right: 1rem;
+    font-size: 1.1rem;
+}
+
+.admin-footer {
+    text-align: right;
+    width: 80vw;
+    margin: 1rem auto 0;
+}
+
+/* 버튼정의 */
+.delete-prize {
+    border: 0;
+    padding: 0;
+    background-color: transparent;
+}
+
+.admin-btn-wrapper {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin: 1rem auto 2rem;
+    width: 80vw;
+    gap: 1rem;
+    flex-wrap: wrap;
+}
+
+/* 얼럿설정 */
+.swal2-title {
+    font-size: 1.2rem;
+    line-height: 1.4;
+    word-break: keep-all;
+}
+
+.admin-summary {
+    margin-left: auto;
+    margin-right: 1rem;
+}
+
+@media screen and (max-width: 1200px) {
+    .admin {
+        padding: 2rem;
+    }
+
+    .admin h1 {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .admin h1 span {
+        margin-top: 0.5rem
+    }
+}
+
+@media screen and (max-width: 960px) {
+    .admin-header {
+        flex-direction: column;
+    }
+
+    .admin h1,
+    .admin-status {
+        align-self: flex-start;
+    }
+
+    .admin-status {
+        margin-top: 1rem;
+        flex-wrap: wrap;
+        justify-content: flex-start;
+    }
+}
+
+.theme-label {
+    display: flex;
+    gap: 0.5rem;
+}
+
+.theme-label input[type="radio"] {
+  display: none;
+}
+
+.theme-label label {
+    margin-right: 0;
+}
+
+/* 기본 span 스타일 */
+.theme-label label span {
+  display: inline-flex;
+  width: 80px;
+  height: 36px;
+  line-height: 36px;
+  border-radius: 6px;
+  font-size: 12px;
+  font-weight: bold;
+  color: #fff;
+  opacity: 0.7;
+  transition: all 0.3s ease;
+  border: 3px solid #ffffff;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  opacity: 0.5;
+}
+
+/* ✅ 선택된 input의 형제 span에 스타일 적용 */
+.theme-label input[type="radio"]:checked + span {
+  opacity: 1;
+  border-color: #000000;
+  box-shadow: 0 0 4px rgba(0, 0, 0, 0.4);
+  opacity: 1;
+}
+
+/* ✅ 공통 라디오 그룹 (결과표시, 운영모드 둘 다 사용) */
+.radio-group,
+.mode-radio-group {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    margin-top: 0.5rem;
+}
+
+/* 운영 모드 섹션 심플 강조 */
+.admin-mode-simple {
+    margin-top: 1rem; /* 🔹 운영 모드 wrapper 여백 */
+}
+
+.admin-mode-simple h2 {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+}
+
+.mode-pill {
+    display: inline-flex;
+    align-items: center;
+    padding: 0.15rem 0.6rem;
+    border-radius: 999px;
+    font-size: 0.875rem;
+    font-weight: 600;
+    border: 1px solid #ddd;
+}
+
+.mode-pill.live {
+    background-color: #f5faff;
+    color: #2b5df5;
+}
+
+.mode-pill.test {
+    background-color: #fff4f2;
+    color: #d4380d;
+}
+
+/* 기존 mode-radio-group은 radio-group와 동일 스타일 사용
+   (위에서 같이 선언했으니 여기서는 생략 가능) */
+
+.mode-hint {
+    margin-top: 0.4rem;
+    font-size: 1rem;
+    color: #777;
+}
+
+.mode-warning-text {
+    margin-top: 0.2rem;
+    font-size: 1rem;
+    color: #d4380d;
+}
