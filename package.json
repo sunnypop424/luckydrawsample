@@ -25,7 +25,7 @@
     "xlsx": "^0.18.5",
     "zustand": "^5.0.6"
   },
-  "homepage": "https://lovefordino.github.io/",
+  "homepage": "https://sunnypop424.github.io/luckydrawsample/",
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
